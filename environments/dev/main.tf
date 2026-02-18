@@ -8,7 +8,7 @@ module "vpc"{
 
 module "ec2"{
     source = "../../modules/ec2"
-    ami-id = "ami-0b6c6ebed2801a5cb"
+    ami-id = "ami-019715e0d74f695be"
     instance_type = "t3.small"
     instance_count = 2
     subnet_id = module.vpc.subnet_id
