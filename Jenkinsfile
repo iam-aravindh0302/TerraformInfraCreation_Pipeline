@@ -2,14 +2,14 @@ pipeline {
   agent any
 
   environment {
-    ENV = "${envs.BRANCH_NAME}"
-    TF_WORKDIR = "environments/${envs.BRANCH_NAME}"
+    ENV = "${env.BRANCH_NAME}"
+    TF_WORKDIR = "environments/${env.BRANCH_NAME}"
   }
 
   stages {
     stage('Checkout') {
       steps {
-        git branch: "${envs.BRANCH_NAME}", url: 'https://github.com/iam-aravindh0302/TerraformInfraCreation_Pipeline.git'
+        git branch: "${env.BRANCH_NAME}", url: 'https://github.com/iam-aravindh0302/TerraformInfraCreation_Pipeline.git'
       }
     }
 
@@ -34,7 +34,7 @@ pipeline {
     stage('Approval') {
       
       when {
-        expression { envs.BRANCH_NAME == 'production' }
+        expression { env.BRANCH_NAME == 'production' }
       }
     
       steps {
