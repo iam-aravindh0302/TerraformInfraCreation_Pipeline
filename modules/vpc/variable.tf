@@ -1,5 +1,5 @@
 variable "cidr_block" {
-  type        = number
+  type        = string
   description = "The CIDR block of the VPC"
 }
 variable "envs" {
@@ -7,7 +7,7 @@ variable "envs" {
   description = "Which environment to be created:'dev,qa,production'"
 }
 variable "subnet-cidr_block" {
-  type        = number
+  type        = string
   description = "The CIDR block of my subnet"
 }
 
