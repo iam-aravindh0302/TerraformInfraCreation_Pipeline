@@ -1,5 +1,5 @@
 
-/*variable "cidr_block" {
+variable "cidr_block" {
   type        = string
   description = "The CIDR block of the VPC"
 }
@@ -16,4 +16,3 @@ variable "subnet-az" {
   type        = string
   description = "Availability zone of my vpc"
 }
-*/
