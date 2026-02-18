@@ -1,4 +1,4 @@
-module "vpc"{
+/*module "vpc"{
     source = "../../modules/vpc"
     cidr_block="12.0.0.0/16"
     subnet-cidr_block = "12.0.1.0/24"
@@ -20,4 +20,4 @@ module "s3"{
     bucket_count = 3
     envs = "production"
 }
-
+*/
